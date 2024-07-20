@@ -1,0 +1,27 @@
+$primary-color:#cac8c8;
+$text-color: #000;
+$accent-color: #ff652f;
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+
+body{
+    background: $primary-color;
+    font-weight: map-get($map: $font-weights, $key: bold); // maping when having multiple variables
+}
+
+.main{
+    width: 80%;
+    margin: 0 auto;
+    // locating(nesting sass) p from main class by interpolating
+    #{&}__p{
+        font-weight: map-get($map: $font-weights, $key: bold);
+
+        &:hover{
+            color: #ff652f;
+        }
+    }
+
+}
