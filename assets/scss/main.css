@@ -1,3 +1,4 @@
+@import '/assets/scss/_reset.scss';
 body {
   background: #cac8c8;
   font-weight: 700;
